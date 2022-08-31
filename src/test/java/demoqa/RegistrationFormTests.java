@@ -11,6 +11,7 @@ import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormTests extends TestBase{
 
+    @Test
     @DisplayName("Successful fill form")
     void successfulTest() {
         String firstName = "Alex";
@@ -35,7 +36,7 @@ public class RegistrationFormTests extends TestBase{
             $("#subjectsInput").sendKeys("Maths");
             $("#subjectsInput").pressEnter();
             $("#hobbiesWrapper").$(byText("Sports")).click();
-            $("#uploadPicture").uploadFromClasspath("img/1.png");
+            $("#uploadPicture").uploadFromClasspath("1.png");
             $("#currentAddress").setValue("Some street 1");
             $("#state").click();
             $("#stateCity-wrapper").$(byText("NCR")).click();
